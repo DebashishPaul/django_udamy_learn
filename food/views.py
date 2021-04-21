@@ -20,3 +20,11 @@ def index(request):
 
 def foodList(request):
     return HttpResponse('<h1>this is title of<br> food list</h1>')
+
+def details(request, item_id):
+    item = Item.objects.get(pk=item_id)
+    context = {
+        'item': item,
+    }
+    return render(request, 'food/details.html', context)
+
