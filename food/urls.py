@@ -5,9 +5,9 @@ from django.urls import path
 app_name = 'food'
 
 urlpatterns = [
-    path('',views.index, name='index'),
+    path('',views.IndexClassViews.as_view(), name='index'),
     #/food/1
-    path('<int:item_id>', views.details, name='details'),
+    path('<int:pk>', views.DetailViewClass.as_view(), name='details'),
     path('item/', views.foodList, name='item'),
     #adding an item
     path('create', views.create_item, name='create_item'),

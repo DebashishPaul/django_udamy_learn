@@ -4,14 +4,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="{{ item.item_image }}" height="300px" alt="{{ item.item_name }}" class="card" />
+                <img src="{{ object.item_image }}" height="300px" alt="{{ item.item_name }}" class="card" />
             </div>
             <div class="col-md-6">
-                <h1>{{ item.item_name }}</h1>
-                <h4>{{ item.item_desc }}</h4>
-                <span>${{ item.item_price }}</span>
+                <h1>{{ object.item_name }}</h1>
+                <h4>{{ object.item_desc }}</h4>
+                <span>${{ object.item_price }}</span>
                 <a href="{% url 'food:delete_item' item.id %}">delete</a>
             </div>
+            <p>posted by - {{ object.user_name }}</p>
         </div>
     </div>
 {% endblock %}
