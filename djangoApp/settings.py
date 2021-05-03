@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'food',
     'user',
     'restAPI',
+    'rest_framework',
 
 ]
 

@@ -11,3 +11,4 @@ class MovieData(models.Model):
     name = models.CharField(max_length=200, null=False)
     duration = models.FloatField()
     rating = models.FloatField()
+    typ = models.CharField(max_length=100, default = 'actions')
