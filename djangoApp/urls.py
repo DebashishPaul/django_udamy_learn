@@ -8,11 +8,13 @@ from django.conf.urls.static import static
 #start rest api framework task
 from rest_framework import routers
 from restAPI.views import MovieViewSet, ActionTypeMovie, ComedyTypeMovie
+from brandapi.views import BrandViewSet
 
 router = routers.SimpleRouter()
 router.register(r'movies', MovieViewSet)
 router.register(r'actions', ActionTypeMovie)
 router.register(r'comedy', ComedyTypeMovie)
+router.register(r'brand', BrandViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('movies', include(router.urls)),
